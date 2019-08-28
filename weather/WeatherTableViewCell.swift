@@ -1,16 +1,10 @@
-//
-//  WeatherTableViewCell.swift
-//  weather
-//
-//  Created by Сергей on 26/08/2019.
-//  Copyright © 2019 Effective. All rights reserved.
-//
-
 import UIKit
 
 class WeatherTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var content: UIView!
+    @IBOutlet weak var shadow: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
