@@ -77,6 +77,9 @@ final class HeaderView: UIView {
         addSubview(temperatureLabel)
 
         // add constraints
+        self.leftAnchor.constraint(equalTo: leftAnchor,constant: 0).isActive = true
+        self.topAnchor.constraint(equalTo: topAnchor,constant: 44).isActive = true
+        
         let margins = layoutMarginsGuide
         locationLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         locationLabel.trailingAnchor.constraint(equalTo:margins.trailingAnchor).isActive = true

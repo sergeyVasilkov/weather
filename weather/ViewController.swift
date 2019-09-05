@@ -37,9 +37,9 @@ class ViewController: UIViewController {
         weatherTableView.delegate = tableViewModel
         weatherTableView.dataSource = tableViewModel 
         // Do any additional setup after loading the view.
-        headerView.location = "Omsk"
-        headerView.condition = "Rainy"
-        headerView.temperature = "14"
+//        headerView.location = "Omsk"
+//        headerView.condition = "Rainy"
+//        headerView.temperature = "14"
 
         headerView.frame = CGRect(x: 0, y: 0, width: 0, height: 230)
         headerView.translatesAutoresizingMaskIntoConstraints = true
