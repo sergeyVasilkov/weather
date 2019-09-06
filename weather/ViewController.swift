@@ -23,9 +23,10 @@ class ViewController: UIViewController {
     @IBOutlet var gradient: GradientView!
     @IBOutlet weak var weatherTableView: UITableView!
     var weatherPredictions:[String] = ["  Четверг", "  Пятница"]
+    var weatherTemperatures:[String] = ["12º", "15º"]
     let cellSpacingHeight: CGFloat = 10
 
-    private lazy var tableViewModel = WeatherTableViewModel(weatherPredictions: weatherPredictions)
+    private lazy var tableViewModel = WeatherTableViewModel(weatherPredictions: weatherPredictions , weatherTemperatures: weatherTemperatures)
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

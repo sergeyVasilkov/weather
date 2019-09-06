@@ -12,9 +12,11 @@ import UIKit
 final class WeatherTableViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     private let weatherPredictions: [String]
+    private let weatherTemperatures: [String]
 
-    init(weatherPredictions: [String]) {
+    init(weatherPredictions: [String],weatherTemperatures: [String]) {
         self.weatherPredictions = weatherPredictions
+        self.weatherTemperatures = weatherTemperatures
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +44,7 @@ final class WeatherTableViewModel: NSObject, UITableViewDelegate, UITableViewDat
         cell.shadow.layer.cornerRadius = 16
 
         cell.weatherLabel.text = weatherPredictions[indexPath.row]
-
+        cell.temperatureLabel.text = weatherTemperatures[indexPath.row]
         return cell
     }
 

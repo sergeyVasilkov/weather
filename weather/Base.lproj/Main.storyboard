@@ -44,17 +44,24 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-E7-V9N" userLabel="Shadow">
                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-73-Z7S">
+                                                            <rect key="frame" x="343" y="29" width="23" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="g6b-73-Z7S" firstAttribute="top" secondItem="zI0-E7-V9N" secondAttribute="top" constant="29" id="XRz-N0-fqR"/>
                                                         <constraint firstAttribute="height" constant="80" id="ge0-68-TPk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="g6b-73-Z7S" secondAttribute="trailing" constant="16" id="p5y-9W-q4d"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
+                                                    <rect key="frame" x="16" y="29" width="75" height="21"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="Wre-H6-zKy"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -63,18 +70,19 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="T2T-qq-XfE" secondAttribute="trailing" id="04C-aR-9fT"/>
-                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" id="FYh-Kf-1yL"/>
-                                                <constraint firstAttribute="trailing" secondItem="zI0-E7-V9N" secondAttribute="trailing" id="GhD-va-DJ6"/>
-                                                <constraint firstItem="zI0-E7-V9N" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" id="JKb-sa-9fC"/>
-                                                <constraint firstItem="zI0-E7-V9N" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" id="Mgx-qp-VBm"/>
-                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" id="fm1-d5-aus"/>
+                                                <constraint firstAttribute="trailing" secondItem="zI0-E7-V9N" secondAttribute="trailing" id="WWl-hx-4Zu"/>
+                                                <constraint firstAttribute="bottom" secondItem="T2T-qq-XfE" secondAttribute="bottom" constant="30" id="bph-sd-aF6"/>
+                                                <constraint firstItem="zI0-E7-V9N" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" id="hCX-dV-X2I"/>
+                                                <constraint firstItem="zI0-E7-V9N" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" id="hdq-ve-bi6"/>
+                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" constant="29" id="puV-ch-9Eu"/>
+                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" constant="16" id="sFJ-08-EyT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="content" destination="qOT-L8-lPY" id="AZr-Qd-q8r"/>
                                             <outlet property="shadow" destination="zI0-E7-V9N" id="rt2-AS-qXe"/>
+                                            <outlet property="temperatureLabel" destination="g6b-73-Z7S" id="yPF-ED-xtf"/>
                                             <outlet property="weatherLabel" destination="T2T-qq-XfE" id="mZG-W7-BbG"/>
                                         </connections>
                                     </tableViewCell>

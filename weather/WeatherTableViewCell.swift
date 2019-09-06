@@ -3,9 +3,12 @@ import UIKit
 class WeatherTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+
     @IBOutlet weak var content: UIView!
     @IBOutlet weak var shadow: UIView!
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
