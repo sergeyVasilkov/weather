@@ -13,9 +13,6 @@
         <array key="SF-Pro-Text-Regular.otf">
             <string>SFProText-Regular</string>
         </array>
-        <array key="SF-Pro-Text-Semibold.otf">
-            <string>SFProText-Semibold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -27,11 +24,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gqZ-H8-PhX">
-                                <rect key="frame" x="16" y="44" width="382" height="852"/>
+                                <rect key="frame" x="16" y="44" width="382" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="852" id="OEi-pn-y3O"/>
-                                </constraints>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -43,11 +37,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-E7-V9N" userLabel="Shadow">
-                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-73-Z7S">
-                                                            <rect key="frame" x="343" y="29" width="23" height="25.5"/>
-                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-73-Z7S">
+                                                            <rect key="frame" x="300" y="29" width="27" height="21"/>
+                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -59,10 +53,10 @@
                                                         <constraint firstAttribute="trailing" secondItem="g6b-73-Z7S" secondAttribute="trailing" constant="16" id="p5y-9W-q4d"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
-                                                    <rect key="frame" x="16" y="29" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Четверг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
+                                                    <rect key="frame" x="16" y="29" width="71" height="21"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -72,10 +66,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zI0-E7-V9N" secondAttribute="trailing" id="WWl-hx-4Zu"/>
                                                 <constraint firstAttribute="bottom" secondItem="T2T-qq-XfE" secondAttribute="bottom" constant="30" id="bph-sd-aF6"/>
+                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" constant="16" id="h4x-et-RYK"/>
                                                 <constraint firstItem="zI0-E7-V9N" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" id="hCX-dV-X2I"/>
                                                 <constraint firstItem="zI0-E7-V9N" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" id="hdq-ve-bi6"/>
                                                 <constraint firstItem="T2T-qq-XfE" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" constant="29" id="puV-ch-9Eu"/>
-                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" constant="16" id="sFJ-08-EyT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,55 +89,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gqZ-H8-PhX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0hG-7E-CG1"/>
                             <constraint firstItem="gqZ-H8-PhX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Bdz-Y8-NS6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gqZ-H8-PhX" secondAttribute="bottom" id="FSF-Bb-bpL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqZ-H8-PhX" secondAttribute="trailing" constant="16" id="YTn-rd-FRO"/>
+                            <constraint firstItem="gqZ-H8-PhX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="b9G-sC-QrO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="gradient" destination="8bC-Xf-vdC" id="aeI-Fk-zbI"/>
-                        <outlet property="header" destination="gzV-bc-KRZ" id="ffe-Dp-sXJ"/>
                         <outlet property="weatherTableView" destination="gqZ-H8-PhX" id="LBc-LG-Yyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzV-bc-KRZ">
-                    <rect key="frame" x="0.0" y="0.0" width="374" height="242"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Омск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="RdF-tB-4NA">
-                            <rect key="frame" x="154" y="36" width="66" height="29"/>
-                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="24"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Переменная облачность " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L9-xv-YQD">
-                            <rect key="frame" x="16" y="73" width="342" height="20.5"/>
-                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMB-2Q-app">
-                            <rect key="frame" x="151" y="106" width="72" height="57"/>
-                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="47"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="NMB-2Q-app" firstAttribute="top" secondItem="gzV-bc-KRZ" secondAttribute="top" constant="106" id="DEw-Rt-gxQ"/>
-                        <constraint firstItem="RdF-tB-4NA" firstAttribute="centerX" secondItem="gzV-bc-KRZ" secondAttribute="centerX" id="UO2-i7-g8y"/>
-                        <constraint firstAttribute="height" constant="242" id="WET-zX-EGu"/>
-                        <constraint firstItem="2L9-xv-YQD" firstAttribute="leading" secondItem="Dpc-uP-8g7" secondAttribute="leading" constant="16" id="Wvq-wk-JDP"/>
-                        <constraint firstItem="2L9-xv-YQD" firstAttribute="centerX" secondItem="gzV-bc-KRZ" secondAttribute="centerX" id="ZTp-E2-1PH"/>
-                        <constraint firstItem="2L9-xv-YQD" firstAttribute="top" secondItem="gzV-bc-KRZ" secondAttribute="top" constant="73" id="eXA-Cu-MGu"/>
-                        <constraint firstItem="Dpc-uP-8g7" firstAttribute="trailing" secondItem="2L9-xv-YQD" secondAttribute="trailing" constant="16" id="kAG-dT-hM4"/>
-                        <constraint firstItem="RdF-tB-4NA" firstAttribute="top" secondItem="gzV-bc-KRZ" secondAttribute="top" constant="36" id="lXx-U8-vJF"/>
-                        <constraint firstItem="NMB-2Q-app" firstAttribute="centerX" secondItem="gzV-bc-KRZ" secondAttribute="centerX" id="mJn-fi-03h"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="Dpc-uP-8g7"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>

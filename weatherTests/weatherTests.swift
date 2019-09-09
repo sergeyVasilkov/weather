@@ -9,7 +9,6 @@
 import XCTest
 @testable import weather
 
-
 class WeatherTests: XCTestCase {
 
     override func setUp() {

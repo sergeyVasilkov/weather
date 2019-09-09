@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 final class HeaderView: UIView {
 
     var location: String? {
@@ -20,7 +19,7 @@ final class HeaderView: UIView {
         }
     }
 
-    var condition : String? {
+    var condition: String? {
         get {
             return conditionsLabel.text
         }
@@ -38,12 +37,10 @@ final class HeaderView: UIView {
         }
     }
 
-
-
     private let locationLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.font = UIFont(name:"SF Pro Text",size:    24.0)
+        view.font = UIFont(name: "SF Pro Text", size: 24.0)
         view.textColor = .white
         view.textAlignment = .center
         return view
@@ -77,31 +74,32 @@ final class HeaderView: UIView {
         addSubview(temperatureLabel)
 
         // add constraints
-        self.leftAnchor.constraint(equalTo: leftAnchor,constant: 0).isActive = true
-        self.topAnchor.constraint(equalTo: topAnchor,constant: 44).isActive = true
-        
+        self.leftAnchor.constraint(equalTo: leftAnchor, constant: 0).isActive = true
+        self.topAnchor.constraint(equalTo: topAnchor, constant: 44).isActive = true
+
         let margins = layoutMarginsGuide
         locationLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        locationLabel.trailingAnchor.constraint(equalTo:margins.trailingAnchor).isActive = true
+        locationLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         locationLabel.centerXAnchor.constraint(equalTo: centerXAnchor ).isActive = true
-        locationLabel.topAnchor.constraint(equalTo: topAnchor,constant: 36).isActive = true
+        locationLabel.topAnchor.constraint(equalTo: topAnchor, constant: 36).isActive = true
+        locationLabel.textAlignment = .center
+        locationLabel.font = UIFont(name: "SF Pro Text", size: 24.0)
         locationLabel.text = "Омск"
 
-        conditionsLabel.leadingAnchor.constraint(equalTo:margins.leadingAnchor).isActive = true
-        conditionsLabel.trailingAnchor.constraint(equalTo:margins.trailingAnchor).isActive = true
+        conditionsLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        conditionsLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         conditionsLabel.centerXAnchor.constraint(equalTo: centerXAnchor ).isActive = true
-        conditionsLabel.topAnchor.constraint(equalTo: topAnchor,constant: 73).isActive = true
-        conditionsLabel.font = UIFont(name:"SF Pro Text",size:    17.0)
+        conditionsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 73).isActive = true
+        conditionsLabel.font = UIFont(name: "SF Pro Text", size: 18.0)
         conditionsLabel.textColor = .white
         conditionsLabel.textAlignment = .center
         conditionsLabel.text = "Переменная облачность"
 
-
-        temperatureLabel.leadingAnchor.constraint(equalTo:margins.leadingAnchor).isActive = true
-        temperatureLabel.trailingAnchor.constraint(equalTo:margins.trailingAnchor).isActive = true
+        temperatureLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        temperatureLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         temperatureLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor ).isActive = true
-        temperatureLabel.topAnchor.constraint(equalTo: self.topAnchor,constant: 106).isActive = true
-        temperatureLabel.font = UIFont(name:"SF Pro Text",size:    47.0)
+        temperatureLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 106).isActive = true
+        temperatureLabel.font = UIFont(name: "SF Pro Text", size: 48.0)
         temperatureLabel.textColor = .white
         temperatureLabel.textAlignment = .center
         temperatureLabel.text = "14º"
