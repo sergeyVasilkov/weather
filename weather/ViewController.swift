@@ -1,5 +1,7 @@
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
     private let headerView: HeaderView = {
@@ -13,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherTableView: UITableView!
     var weatherPredictions: [String] = ["Четверг", "Пятница"]
     var weatherTemperatures: [String] = ["12º", "15º"]
+    let weather = WeatherGetter()
+    var weatherInfoStruct :WeatherStruct? = nil
     let cellSpacingHeight: CGFloat = 10
 
     private lazy var tableViewModel =
@@ -23,10 +27,10 @@ class ViewController: UIViewController {
         gradient.gradientLayer.frame = self.view.bounds
     }
 
-//    func headerSetup() {
-//        headerView.frame = CGRect(x: 0, y: 0, width: 0, height: 230)
-//        headerView.translatesAutoresizingMaskIntoConstraints = true
-//    }
+    //    func headerSetup() {
+    //        headerView.frame = CGRect(x: 0, y: 0, width: 0, height: 230)
+    //        headerView.translatesAutoresizingMaskIntoConstraints = true
+    //    }
 
     func weatherTableSetup() {
         weatherTableView.delegate = tableViewModel
@@ -45,7 +49,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         weatherTableSetup()
-//        headerSetup()
+
+       weatherInfoStruct = weather.getWeather(city: "Moscow")
+        
         gradientSetup()
     }
 
