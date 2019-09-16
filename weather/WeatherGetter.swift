@@ -1,14 +1,13 @@
 import Foundation
-
-
-
 class WeatherGetter {
+
+    var localWeatherStruct: WeatherStruct? = nil
 
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "3ed83741c652e2e0eba2cba1843820bf"
-    func getWeather(city: String)->WeatherStruct?{
+    func getWeather(city: String){
 
-        var resultStruct:WeatherStruct!
+        var resultStruct: WeatherStruct!
         // This is a pretty simple networking task, so the shared session will do.
         let session = URLSession.shared
 
@@ -25,25 +24,23 @@ class WeatherGetter {
             else {
                 // Case 2: Success
                 // We got a response from the server!
-                //print("Data:\n\(data!)")
                 print("Raw data:\n\(data!)\n")
                 let dataString = String(data: data!, encoding: String.Encoding.utf8)
                 do {
                     let myStruct = try JSONDecoder().decode(WeatherStruct.self, from: data!)
-                    //print (myStruct)
-                    resultStruct = myStruct
-
+                 //   print (myStruct)
+                    self.localWeatherStruct = myStruct
                 }
                 catch let error {
                     print(error)
                 }
-                 print("Human-readable data:\n\(dataString!)")
+                // print("Human-readable data:\n\(dataString!)")
             }
         }
-
-        // The data task is set up...launch it!
         dataTask.resume()
-        return resultStruct
     }
 
+    func getLocalWeather()->WeatherStruct {
+        return localWeatherStruct!
+    }
 }

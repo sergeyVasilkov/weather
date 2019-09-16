@@ -1,7 +1,4 @@
 import UIKit
-
-
-
 class ViewController: UIViewController {
 
     private let headerView: HeaderView = {
@@ -27,10 +24,6 @@ class ViewController: UIViewController {
         gradient.gradientLayer.frame = self.view.bounds
     }
 
-    //    func headerSetup() {
-    //        headerView.frame = CGRect(x: 0, y: 0, width: 0, height: 230)
-    //        headerView.translatesAutoresizingMaskIntoConstraints = true
-    //    }
 
     func weatherTableSetup() {
         weatherTableView.delegate = tableViewModel
@@ -50,8 +43,13 @@ class ViewController: UIViewController {
 
         weatherTableSetup()
 
-       weatherInfoStruct = weather.getWeather(city: "Moscow")
-        
+        weather.getWeather(city: "Moscow")
+        print ("working")
+        sleep(1)
+        weatherInfoStruct = weather.getLocalWeather()
+        print (weatherInfoStruct)
+        headerView.temperature =  String(format:"%.0f", (weatherInfoStruct?.main.temp)!)
+        self.reloadInputViews()
         gradientSetup()
     }
 
