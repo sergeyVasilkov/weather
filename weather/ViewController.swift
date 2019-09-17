@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let weather = WeatherGetter()
     var weatherInfoStruct :WeatherStruct? = nil
     let cellSpacingHeight: CGFloat = 10
+    let weatherLoadingQueue = DispatchQueue.global(qos: .utility)
 
     private lazy var tableViewModel =
         WeatherTableViewModel(weatherPredictions: weatherPredictions, weatherTemperatures: weatherTemperatures)
@@ -43,14 +44,13 @@ class ViewController: UIViewController {
 
         weatherTableSetup()
 
-        weather.getWeather(city: "Moscow")
-        print ("working")
-        sleep(1)
-        weatherInfoStruct = weather.getLocalWeather()
-        print (weatherInfoStruct)
-        headerView.temperature =  String(format:"%.0f", (weatherInfoStruct?.main.temp)!)
+        weather.getWeather(city: "Omsk") { [weak self] weatherStruct in
+            self?.headerView.temperature =  String(format:"%.0f", (weatherStruct.main.temp))
+        }
+
         self.reloadInputViews()
-        gradientSetup()
+        self.gradientSetup()
+
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
