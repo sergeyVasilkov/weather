@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     var weatherInfoStruct :WeatherStruct? = nil
     let cellSpacingHeight: CGFloat = 10
     let weatherLoadingQueue = DispatchQueue.global(qos: .utility)
+    let myRefreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.white
+        refreshControl.addTarget(self,action: #selector (refresh(sender:)),for: .valueChanged)
+        return refreshControl
+    }()
 
     private lazy var tableViewModel =
         WeatherTableViewModel(weatherPredictions: weatherPredictions, weatherTemperatures: weatherTemperatures)
@@ -24,6 +30,10 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
+    @objc private func refresh(sender: UIRefreshControl){
+        updateWeather()
+        sender.endRefreshing()
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradient.gradientLayer.frame = self.view.bounds
@@ -33,6 +43,7 @@ class ViewController: UIViewController {
         weatherTableView.delegate = tableViewModel
         weatherTableView.dataSource = tableViewModel
         weatherTableView.tableHeaderView = headerView
+        weatherTableView.refreshControl = myRefreshControl
     }
 
     func gradientSetup() {
@@ -47,7 +58,7 @@ class ViewController: UIViewController {
 
         weatherTableSetup()
 
-        subscribe()
+       // subscribe()
 
         //updateWeather()
 
@@ -73,12 +84,12 @@ class ViewController: UIViewController {
         }
     }
 
-    func subscribe() {
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)),
-                                               name: UIApplication.didBecomeActiveNotification, object: nil)
-    }
-
-    @objc func appDidBecomeActive(_ payload: Notification) {
-        updateWeather()
-    }
+//    func subscribe() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)),
+//                                               name: UIApplication.didBecomeActiveNotification, object: nil)
+//    }
+//
+//    @objc func appDidBecomeActive(_ payload: Notification) {
+//        updateWeather()
+//    }
 }
