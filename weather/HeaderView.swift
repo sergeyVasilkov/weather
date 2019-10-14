@@ -95,10 +95,17 @@ final class HeaderView: UIView {
         conditionsLabel.textAlignment = .center
         conditionsLabel.text = "Переменная облачность"
 
-        temperatureLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        temperatureLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        temperatureLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor ).isActive = true
-        temperatureLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 106).isActive = true
+//        temperatureLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+//        temperatureLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+//        temperatureLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor ).isActive = true
+//        temperatureLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 106).isActive = true
+
+        NSLayoutConstraint.activate([
+            temperatureLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            temperatureLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            temperatureLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor ),
+            temperatureLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 106)])
+
         temperatureLabel.font = UIFont(name: "SF Pro Text", size: 48.0)
         temperatureLabel.textColor = .white
         temperatureLabel.textAlignment = .center

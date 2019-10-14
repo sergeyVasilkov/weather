@@ -43,3 +43,9 @@ class WeatherGetter {
 // $0 почитать
 //capture list (список захвата ) - weak и все дела
 //ARC - подсчет ссылок
+//GET и POST запросы
+//collection view 
+//alomofireImage или KingsFisher - помогает загружать изображения
+// к следующему разу сделать первый экран
+//UITextViewDelegate
+//будет метод shouldChangeCharactersInRange

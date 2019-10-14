@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,10 +35,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-E7-V9N" userLabel="Shadow">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-73-Z7S">
-                                                            <rect key="frame" x="300" y="29" width="27" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Четверг" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
+                                                            <rect key="frame" x="16" y="29" width="307" height="22.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="15º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6b-73-Z7S">
+                                                            <rect key="frame" x="339" y="29.5" width="27" height="21"/>
                                                             <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -48,28 +54,20 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="g6b-73-Z7S" firstAttribute="top" secondItem="zI0-E7-V9N" secondAttribute="top" constant="29" id="XRz-N0-fqR"/>
+                                                        <constraint firstItem="T2T-qq-XfE" firstAttribute="centerY" secondItem="zI0-E7-V9N" secondAttribute="centerY" id="R0x-dV-k4K"/>
+                                                        <constraint firstItem="g6b-73-Z7S" firstAttribute="leading" secondItem="T2T-qq-XfE" secondAttribute="trailing" constant="16" id="agh-xx-Lbv"/>
+                                                        <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="zI0-E7-V9N" secondAttribute="leading" constant="16" id="eYL-I1-vep"/>
                                                         <constraint firstAttribute="height" constant="80" id="ge0-68-TPk"/>
+                                                        <constraint firstItem="g6b-73-Z7S" firstAttribute="centerY" secondItem="zI0-E7-V9N" secondAttribute="centerY" id="juU-tX-orq"/>
                                                         <constraint firstAttribute="trailing" secondItem="g6b-73-Z7S" secondAttribute="trailing" constant="16" id="p5y-9W-q4d"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Четверг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2T-qq-XfE">
-                                                    <rect key="frame" x="16" y="29" width="71" height="21"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zI0-E7-V9N" secondAttribute="trailing" id="WWl-hx-4Zu"/>
-                                                <constraint firstAttribute="bottom" secondItem="T2T-qq-XfE" secondAttribute="bottom" constant="30" id="bph-sd-aF6"/>
-                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" constant="16" id="h4x-et-RYK"/>
                                                 <constraint firstItem="zI0-E7-V9N" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" id="hCX-dV-X2I"/>
                                                 <constraint firstItem="zI0-E7-V9N" firstAttribute="leading" secondItem="qOT-L8-lPY" secondAttribute="leading" id="hdq-ve-bi6"/>
-                                                <constraint firstItem="T2T-qq-XfE" firstAttribute="top" secondItem="qOT-L8-lPY" secondAttribute="top" constant="29" id="puV-ch-9Eu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

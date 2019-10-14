@@ -27,7 +27,7 @@ final class WeatherTableViewModel: NSObject, UITableViewDelegate, UITableViewDat
         cell.layer.masksToBounds = true
 
         cell.weatherLabel.layer.masksToBounds = true
-        cell.weatherLabel.layer.cornerRadius = 16
+       // cell.weatherLabel.layer.cornerRadius = 16
         cell.shadow.layer.masksToBounds = false
         cell.shadow.layer.shadowRadius = 2
         cell.shadow.layer.shadowOpacity = 0.5
