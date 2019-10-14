@@ -1,63 +1,65 @@
 import Foundation
 
-struct WeatherStruct: Decodable {
+// MARK: - WeatherStruct
+struct WeatherStruct: Codable {
     let coord: Coord
     let weather: [Weather]
     let base: String
-    let main: WeatherMain
-    let visibility: Int
+    let main: Main
     let wind: Wind
     let clouds: Clouds
     let dt: Int
     let sys: Sys
-    let timezone: Int
-    let id: Int
+    let timezone, id: Int
     let name: String
     let cod: Int
 }
 
-struct Coord: Decodable {
-    let lon: Double
-    let lat: Double
-}
-
-struct Weather: Decodable {
-    let id: Int
-    let main: String
-    let description: String
-    let icon: String
-}
-
-struct WeatherMain: Decodable {
-    let temp: Double
-    let pressure: Int
-    let humidity: Int
-    let tempMin: Double
-    let tempMax: Double
-
-    enum CodingKeys: String, CodingKey {
-        case temp
-        case pressure
-        case humidity
-        case tempMin = "temp_min"
-        case tempMax = "temp_max"
-    }
-}
-
-struct Wind: Decodable {
-    let speed: Double
-    let deg: Int
-}
-
-struct Clouds: Decodable {
+// MARK: - Clouds
+struct Clouds: Codable {
     let all: Int
 }
 
-struct Sys: Decodable {
-    let type: Int
-    let id: Int
+// MARK: - Coord
+struct Coord: Codable {
+    let lon, lat: Double
+}
+
+// MARK: - Main
+struct Main: Codable {
+    let temp, pressure: Double
+    let humidity: Int
+    let tempMin, tempMax, seaLevel, grndLevel: Double
+
+    enum CodingKeys: String, CodingKey {
+        case temp, pressure, humidity
+        case tempMin = "temp_min"
+        case tempMax = "temp_max"
+        case seaLevel = "sea_level"
+        case grndLevel = "grnd_level"
+    }
+}
+
+// MARK: - Sys
+struct Sys: Codable {
     let message: Double
     let country: String
-    let sunrise: Int
-    let sunset: Int
+    let sunrise, sunset: Int
+}
+
+// MARK: - Weather
+struct Weather: Codable {
+    let id: Int
+    let main, weatherDescription, icon: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, main
+        case weatherDescription = "description"
+        case icon
+    }
+}
+
+// MARK: - Wind
+struct Wind: Codable {
+    let speed, deg: Double
 }

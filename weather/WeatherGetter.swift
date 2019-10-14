@@ -3,9 +3,9 @@ class WeatherGetter {
 
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "3ed83741c652e2e0eba2cba1843820bf"
-    func getWeather(city: String, completion: @escaping (WeatherStruct)->Void){
+    func getWeather(city: String, completion: @escaping (WeatherStruct)->Void) {
 
-        var resultStruct: WeatherStruct!
+       // var resultStruct: WeatherStruct!
         // This is a pretty simple networking task, so the shared session will do.
         let session = URLSession.shared
 

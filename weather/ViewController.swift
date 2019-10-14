@@ -45,9 +45,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() { 
         super.viewDidLoad()
 
-        subscribe()
-
         weatherTableSetup()
+
+        subscribe()
 
         //updateWeather()
 
@@ -66,15 +66,16 @@ class ViewController: UIViewController {
             guard let strongSelf = self else {
                 return
             }
-
-            UIView.transition(with: strongSelf.headerView, duration: 0.6, options: .transitionCrossDissolve, animations: {
-                strongSelf.headerView.temperature =  weatherStruct.main.temp.fahrenheit()
+            UIView.transition(with: strongSelf.headerView, duration: 0.6, options: .transitionCrossDissolve,
+                              animations: {
+                                strongSelf.headerView.temperature =  (weatherStruct.main.temp-273.15).celsius()
             }, completion: nil)
         }
     }
 
     func subscribe() {
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidBecomeActive(_:)),
+                                               name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
     @objc func appDidBecomeActive(_ payload: Notification) {
