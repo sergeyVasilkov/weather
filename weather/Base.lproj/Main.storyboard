@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EOy-Ec-ygY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,6 +13,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LkE-zH-DEq">
+            <objects>
+                <navigationController id="EOy-Ec-ygY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRG-uT-40p">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H3B-jA-OHh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFY-8f-0ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1501" y="50"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -94,6 +110,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uQr-gs-tOp">
+                        <barButtonItem key="leftBarButtonItem" title="Choose a City" id="MM3-MH-htm">
+                            <connections>
+                                <segue destination="qSh-Rs-rKQ" kind="show" id="zSg-eb-Cfa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="gradient" destination="8bC-Xf-vdC" id="aeI-Fk-zbI"/>
                         <outlet property="weatherTableView" destination="gqZ-H8-PhX" id="LBc-LG-Yyy"/>
@@ -102,6 +125,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+        <!--City Choose View Controller-->
+        <scene sceneID="7rn-XH-mLQ">
+            <objects>
+                <viewController id="qSh-Rs-rKQ" customClass="CityChooseViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91A-kP-71F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of the city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOb-YU-nCa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="34"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bOb-YU-nCa" firstAttribute="top" secondItem="J5r-JW-Tff" secondAttribute="top" id="7aH-Dq-sdh"/>
+                            <constraint firstItem="bOb-YU-nCa" firstAttribute="leading" secondItem="J5r-JW-Tff" secondAttribute="leading" id="SvK-LK-QCS"/>
+                            <constraint firstItem="bOb-YU-nCa" firstAttribute="trailing" secondItem="J5r-JW-Tff" secondAttribute="trailing" id="iaj-Yo-Tn3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J5r-JW-Tff"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fvm-Vz-1ME"/>
+                    <connections>
+                        <outlet property="cityField" destination="bOb-YU-nCa" id="1sr-HA-24f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ST-h8-ura" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.75362318840587" y="19.419642857142858"/>
         </scene>
     </scenes>
 </document>

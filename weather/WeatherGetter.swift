@@ -25,14 +25,16 @@ class WeatherGetter {
                 let dataString = String(data: data!, encoding: String.Encoding.utf8)
                 do {
                     let myStruct = try JSONDecoder().decode(WeatherStruct.self, from: data!)
+                    print("Human-readable data:\n\(dataString!)")
                     DispatchQueue.main.async {
                         completion(myStruct)
                     }
-                   print (myStruct)
+                 //  print (myStruct)
                 } catch let error {
+                    print("Human-readable data:\n\(dataString!)")
                     print(error)
                 }
-                // print("Human-readable data:\n\(dataString!)")
+                print("Human-readable data:\n\(dataString!)")
             }
         }
         dataTask.resume()
